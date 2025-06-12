@@ -1,54 +1,74 @@
-# Diabetes-Risk-Prediction-Project
-This project uses health data to find out if a person may have diabetes. We clean the data, study it, train a model, and check how well it works. We also show which health facts matter most in the result.
-📂 Dataset
-Source: CDC BRFSS 2014 Diabetes Dataset
+# 🩺 Diabetes Risk Prediction Using Machine Learning
 
-Features: Health-related questions like BMI, age, physical activity, blood pressure, etc.
+This project aims to predict diabetes risk using machine learning techniques based on health indicator data from the **Behavioral Risk Factor Surveillance System (BRFSS 2015)** dataset.
 
-Target: Whether the person has diabetes (Diabetes_012)
+---
 
-🛠️ Workflow Steps
-Data Loading
+## 📁 Dataset
 
-Data Cleaning
+- **Source**: [BRFSS 2015](https://www.cdc.gov/brfss/index.html)
+- **File**: `diabetes_binary_health_indicators_BRFSS2015.csv`
+- **Target Column**: `Diabetes_binary`
+    - `1` = Has Diabetes
+    - `0` = No Diabetes
+- **Features**: 21 health indicators including BMI, smoking status, physical activity, cholesterol levels, etc.
 
-Exploratory Data Analysis (EDA)
+---
 
-Feature Selection & Engineering
+## 🔍 Project Objectives
 
-Model Building
+- Load and explore the BRFSS dataset
+- Perform data cleaning and preprocessing
+- Visualize class distribution
+- Train and evaluate multiple ML models:
+  - Logistic Regression
+  - Decision Tree
+  - Random Forest
+  - Gradient Boosting Classifier
+  - Naive Bayes
+- Compare performance metrics
+- Conclude with insights and recommendations
 
-Logistic Regression
+---
 
-Random Forest
+## 📊 Exploratory Data Analysis
 
-XGBoost
+- Checked for missing values and class imbalance
+- Visualized diabetes vs non-diabetes distribution
+- Explored feature relationships using heatmaps and pair plots
 
-Model Evaluation
+---
 
-Accuracy, Precision, Recall, F1-Score
+## 🧠 Machine Learning Models
 
-Confusion Matrix
+| Model                 | Accuracy | Precision | Recall | F1 Score |
+|----------------------|----------|-----------|--------|----------|
+| Gradient Boosting    | 0.840    | 0.428     | 0.472  | 0.449    |
+| Logistic Regression  | 0.731    | 0.310     | 0.775  | 0.443    |
+| Naive Bayes          | 0.724    | 0.295     | 0.719  | 0.418    |
+| Random Forest        | 0.850    | 0.434     | 0.286  | 0.345    |
+| Decision Tree        | 0.796    | 0.292     | 0.334  | 0.312    |
 
-Model Explainability
+✅ **Best model** based on F1 Score: **Gradient Boosting Classifier**
 
-SHAP for feature importance
+---
 
-📈 Results
-Multiple models tested
+## 📌 Key Findings
 
-Best accuracy from Random Forest and XGBoost
+- The dataset is slightly imbalanced (more non-diabetic cases).
+- Gradient Boosting provides the most balanced performance.
+- Logistic Regression shows high recall, useful for sensitive predictions.
 
-SHAP shows most important health factors (like BMI, Age, High BP)
+---
 
-💡 Tools Used
-Python (Pandas, NumPy, Matplotlib, Seaborn)
+## 📎 Requirements
 
-Scikit-learn
+- Python 3.x
+- Jupyter Notebook
+- pandas, matplotlib, seaborn
+- scikit-learn
 
-XGBoost
+Install using pip:
 
-SHAP
-
-Jupyter Notebook
-
+```bash
+pip install pandas matplotlib seaborn scikit-learn
