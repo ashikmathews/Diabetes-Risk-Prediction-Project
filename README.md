@@ -1,6 +1,8 @@
 # 🩺 Diabetes Risk Prediction Using Machine Learning
 
-This project aims to predict diabetes risk using machine learning techniques based on health indicator data from the **Behavioral Risk Factor Surveillance System (BRFSS 2015)** dataset.
+## 📌 Project Overview
+This project aims to predict whether an individual is at risk of diabetes using various health-related indicators from the **Behavioral Risk Factor Surveillance System (BRFSS) 2015** dataset. The problem is formulated as a **binary classification task**.
+
 
 ---
 
